@@ -33,8 +33,28 @@
             this.B_conect = new System.Windows.Forms.Button();
             this.Status_kinect = new System.Windows.Forms.Label();
             this.PB_Lienzo2 = new System.Windows.Forms.PictureBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.Colores = new System.Windows.Forms.GroupBox();
+            this.RoyalBlue = new System.Windows.Forms.Button();
+            this.OrangeRed = new System.Windows.Forms.Button();
+            this.blanco = new System.Windows.Forms.Button();
+            this.Gray = new System.Windows.Forms.Button();
+            this.Pink = new System.Windows.Forms.Button();
+            this.Purple = new System.Windows.Forms.Button();
+            this.B_Selec = new System.Windows.Forms.Button();
+            this.Yellow = new System.Windows.Forms.Button();
+            this.Green = new System.Windows.Forms.Button();
+            this.negro = new System.Windows.Forms.Button();
+            this.Brown = new System.Windows.Forms.Button();
+            this.Red = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CB_TAM = new System.Windows.Forms.ComboBox();
+            this.Borrador = new System.Windows.Forms.Button();
+            this.L_estado = new System.Windows.Forms.Label();
+            this.B_camara = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lienzo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lienzo2)).BeginInit();
+            this.Colores.SuspendLayout();
             this.SuspendLayout();
             // 
             // PB_Lienzo
@@ -47,11 +67,10 @@
             this.PB_Lienzo.Cursor = System.Windows.Forms.Cursors.Default;
             this.PB_Lienzo.Location = new System.Drawing.Point(12, 56);
             this.PB_Lienzo.Name = "PB_Lienzo";
-            this.PB_Lienzo.Size = new System.Drawing.Size(782, 415);
+            this.PB_Lienzo.Size = new System.Drawing.Size(792, 415);
             this.PB_Lienzo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Lienzo.TabIndex = 0;
             this.PB_Lienzo.TabStop = false;
-            this.PB_Lienzo.SizeChanged += new System.EventHandler(this.PB_Lienzo_SizeChanged);
             // 
             // B_conect
             // 
@@ -83,19 +102,256 @@
             this.PB_Lienzo2.InitialImage = null;
             this.PB_Lienzo2.Location = new System.Drawing.Point(12, 56);
             this.PB_Lienzo2.Name = "PB_Lienzo2";
-            this.PB_Lienzo2.Size = new System.Drawing.Size(782, 415);
+            this.PB_Lienzo2.Size = new System.Drawing.Size(792, 415);
             this.PB_Lienzo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Lienzo2.TabIndex = 3;
             this.PB_Lienzo2.TabStop = false;
             this.PB_Lienzo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Lienzo2_MouseDown);
             this.PB_Lienzo2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB_Lienzo2_MouseMove);
             this.PB_Lienzo2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Lienzo2_MouseUp);
+            this.PB_Lienzo2.Resize += new System.EventHandler(this.PB_Lienzo2_Resize);
+            // 
+            // Colores
+            // 
+            this.Colores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Colores.BackColor = System.Drawing.Color.Transparent;
+            this.Colores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Colores.Controls.Add(this.RoyalBlue);
+            this.Colores.Controls.Add(this.OrangeRed);
+            this.Colores.Controls.Add(this.blanco);
+            this.Colores.Controls.Add(this.Gray);
+            this.Colores.Controls.Add(this.Pink);
+            this.Colores.Controls.Add(this.Purple);
+            this.Colores.Controls.Add(this.B_Selec);
+            this.Colores.Controls.Add(this.Yellow);
+            this.Colores.Controls.Add(this.Green);
+            this.Colores.Controls.Add(this.negro);
+            this.Colores.Controls.Add(this.Brown);
+            this.Colores.Controls.Add(this.Red);
+            this.Colores.Location = new System.Drawing.Point(828, 56);
+            this.Colores.Name = "Colores";
+            this.Colores.Size = new System.Drawing.Size(82, 277);
+            this.Colores.TabIndex = 4;
+            this.Colores.TabStop = false;
+            this.Colores.Text = "Colores";
+            // 
+            // RoyalBlue
+            // 
+            this.RoyalBlue.BackColor = System.Drawing.Color.RoyalBlue;
+            this.RoyalBlue.Location = new System.Drawing.Point(8, 205);
+            this.RoyalBlue.Margin = new System.Windows.Forms.Padding(1);
+            this.RoyalBlue.Name = "RoyalBlue";
+            this.RoyalBlue.Size = new System.Drawing.Size(30, 30);
+            this.RoyalBlue.TabIndex = 19;
+            this.RoyalBlue.UseVisualStyleBackColor = false;
+            this.RoyalBlue.Click += new System.EventHandler(this.RoyalBlue_Click);
+            // 
+            // OrangeRed
+            // 
+            this.OrangeRed.BackColor = System.Drawing.Color.Orange;
+            this.OrangeRed.Location = new System.Drawing.Point(45, 141);
+            this.OrangeRed.Margin = new System.Windows.Forms.Padding(1);
+            this.OrangeRed.Name = "OrangeRed";
+            this.OrangeRed.Size = new System.Drawing.Size(30, 30);
+            this.OrangeRed.TabIndex = 15;
+            this.OrangeRed.UseVisualStyleBackColor = false;
+            this.OrangeRed.Click += new System.EventHandler(this.OrangeRed_Click);
+            // 
+            // blanco
+            // 
+            this.blanco.BackColor = System.Drawing.Color.White;
+            this.blanco.Location = new System.Drawing.Point(8, 109);
+            this.blanco.Margin = new System.Windows.Forms.Padding(1);
+            this.blanco.Name = "blanco";
+            this.blanco.Size = new System.Drawing.Size(30, 30);
+            this.blanco.TabIndex = 11;
+            this.blanco.UseVisualStyleBackColor = false;
+            this.blanco.Click += new System.EventHandler(this.blanco_Click);
+            // 
+            // Gray
+            // 
+            this.Gray.BackColor = System.Drawing.Color.Gray;
+            this.Gray.Location = new System.Drawing.Point(45, 77);
+            this.Gray.Margin = new System.Windows.Forms.Padding(1);
+            this.Gray.Name = "Gray";
+            this.Gray.Size = new System.Drawing.Size(30, 30);
+            this.Gray.TabIndex = 12;
+            this.Gray.UseVisualStyleBackColor = false;
+            this.Gray.Click += new System.EventHandler(this.Gray_Click);
+            // 
+            // Pink
+            // 
+            this.Pink.BackColor = System.Drawing.Color.Pink;
+            this.Pink.Location = new System.Drawing.Point(8, 173);
+            this.Pink.Margin = new System.Windows.Forms.Padding(1);
+            this.Pink.Name = "Pink";
+            this.Pink.Size = new System.Drawing.Size(30, 30);
+            this.Pink.TabIndex = 14;
+            this.Pink.UseVisualStyleBackColor = false;
+            this.Pink.Click += new System.EventHandler(this.Pink_Click);
+            // 
+            // Purple
+            // 
+            this.Purple.BackColor = System.Drawing.Color.Purple;
+            this.Purple.Location = new System.Drawing.Point(45, 237);
+            this.Purple.Margin = new System.Windows.Forms.Padding(1);
+            this.Purple.Name = "Purple";
+            this.Purple.Size = new System.Drawing.Size(30, 30);
+            this.Purple.TabIndex = 10;
+            this.Purple.UseVisualStyleBackColor = false;
+            this.Purple.Click += new System.EventHandler(this.Purple_Click);
+            // 
+            // B_Selec
+            // 
+            this.B_Selec.BackColor = System.Drawing.Color.Black;
+            this.B_Selec.Enabled = false;
+            this.B_Selec.Location = new System.Drawing.Point(6, 20);
+            this.B_Selec.Name = "B_Selec";
+            this.B_Selec.Size = new System.Drawing.Size(70, 53);
+            this.B_Selec.TabIndex = 0;
+            this.B_Selec.UseVisualStyleBackColor = false;
+            // 
+            // Yellow
+            // 
+            this.Yellow.BackColor = System.Drawing.Color.Yellow;
+            this.Yellow.Location = new System.Drawing.Point(45, 173);
+            this.Yellow.Margin = new System.Windows.Forms.Padding(1);
+            this.Yellow.Name = "Yellow";
+            this.Yellow.Size = new System.Drawing.Size(30, 30);
+            this.Yellow.TabIndex = 5;
+            this.Yellow.UseVisualStyleBackColor = false;
+            this.Yellow.Click += new System.EventHandler(this.Yellow_Click);
+            // 
+            // Green
+            // 
+            this.Green.BackColor = System.Drawing.Color.Green;
+            this.Green.Location = new System.Drawing.Point(45, 205);
+            this.Green.Margin = new System.Windows.Forms.Padding(1);
+            this.Green.Name = "Green";
+            this.Green.Size = new System.Drawing.Size(30, 30);
+            this.Green.TabIndex = 7;
+            this.Green.UseVisualStyleBackColor = false;
+            this.Green.Click += new System.EventHandler(this.Green_Click);
+            // 
+            // negro
+            // 
+            this.negro.BackColor = System.Drawing.Color.Black;
+            this.negro.Location = new System.Drawing.Point(8, 77);
+            this.negro.Margin = new System.Windows.Forms.Padding(1);
+            this.negro.Name = "negro";
+            this.negro.Size = new System.Drawing.Size(30, 30);
+            this.negro.TabIndex = 1;
+            this.negro.UseVisualStyleBackColor = false;
+            this.negro.Click += new System.EventHandler(this.negro_Click);
+            // 
+            // Brown
+            // 
+            this.Brown.BackColor = System.Drawing.Color.Brown;
+            this.Brown.Location = new System.Drawing.Point(45, 109);
+            this.Brown.Margin = new System.Windows.Forms.Padding(1);
+            this.Brown.Name = "Brown";
+            this.Brown.Size = new System.Drawing.Size(30, 30);
+            this.Brown.TabIndex = 3;
+            this.Brown.UseVisualStyleBackColor = false;
+            this.Brown.Click += new System.EventHandler(this.Brown_Click);
+            // 
+            // Red
+            // 
+            this.Red.BackColor = System.Drawing.Color.Red;
+            this.Red.Location = new System.Drawing.Point(8, 141);
+            this.Red.Margin = new System.Windows.Forms.Padding(1);
+            this.Red.Name = "Red";
+            this.Red.Size = new System.Drawing.Size(30, 30);
+            this.Red.TabIndex = 4;
+            this.Red.UseVisualStyleBackColor = false;
+            this.Red.Click += new System.EventHandler(this.Red_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(836, 423);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 15);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Tamaño";
+            // 
+            // CB_TAM
+            // 
+            this.CB_TAM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CB_TAM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_TAM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CB_TAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_TAM.FormattingEnabled = true;
+            this.CB_TAM.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "14",
+            "18",
+            "24",
+            "32",
+            "60",
+            "80",
+            "100"});
+            this.CB_TAM.Location = new System.Drawing.Point(834, 450);
+            this.CB_TAM.MaxDropDownItems = 100;
+            this.CB_TAM.Name = "CB_TAM";
+            this.CB_TAM.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CB_TAM.Size = new System.Drawing.Size(65, 26);
+            this.CB_TAM.TabIndex = 18;
+            this.CB_TAM.SelectedIndexChanged += new System.EventHandler(this.CB_TAM_SelectedIndexChanged);
+            // 
+            // Borrador
+            // 
+            this.Borrador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Borrador.BackColor = System.Drawing.Color.Transparent;
+            this.Borrador.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Borrador.BackgroundImage")));
+            this.Borrador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Borrador.Location = new System.Drawing.Point(828, 347);
+            this.Borrador.Margin = new System.Windows.Forms.Padding(1);
+            this.Borrador.Name = "Borrador";
+            this.Borrador.Size = new System.Drawing.Size(82, 47);
+            this.Borrador.TabIndex = 14;
+            this.Borrador.UseVisualStyleBackColor = false;
+            this.Borrador.Click += new System.EventHandler(this.Borrador_Click);
+            // 
+            // L_estado
+            // 
+            this.L_estado.AutoSize = true;
+            this.L_estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_estado.ForeColor = System.Drawing.Color.Red;
+            this.L_estado.Location = new System.Drawing.Point(94, 16);
+            this.L_estado.Name = "L_estado";
+            this.L_estado.Size = new System.Drawing.Size(173, 20);
+            this.L_estado.TabIndex = 19;
+            this.L_estado.Text = "Kinect no Detectada";
+            // 
+            // B_camara
+            // 
+            this.B_camara.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_camara.BackgroundImage")));
+            this.B_camara.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.B_camara.Location = new System.Drawing.Point(737, 2);
+            this.B_camara.Name = "B_camara";
+            this.B_camara.Size = new System.Drawing.Size(67, 51);
+            this.B_camara.TabIndex = 20;
+            this.B_camara.UseVisualStyleBackColor = true;
+            this.B_camara.Click += new System.EventHandler(this.B_camara_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 497);
+            this.ClientSize = new System.Drawing.Size(922, 497);
+            this.Controls.Add(this.B_camara);
+            this.Controls.Add(this.L_estado);
+            this.Controls.Add(this.CB_TAM);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Borrador);
+            this.Controls.Add(this.Colores);
             this.Controls.Add(this.PB_Lienzo2);
             this.Controls.Add(this.Status_kinect);
             this.Controls.Add(this.B_conect);
@@ -109,6 +365,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lienzo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lienzo2)).EndInit();
+            this.Colores.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,6 +377,25 @@
         private System.Windows.Forms.Button B_conect;
         private System.Windows.Forms.Label Status_kinect;
         private System.Windows.Forms.PictureBox PB_Lienzo2;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.GroupBox Colores;
+        private System.Windows.Forms.Button RoyalBlue;
+        private System.Windows.Forms.Button OrangeRed;
+        private System.Windows.Forms.Button blanco;
+        private System.Windows.Forms.Button Gray;
+        private System.Windows.Forms.Button Pink;
+        private System.Windows.Forms.Button Purple;
+        private System.Windows.Forms.Button B_Selec;
+        private System.Windows.Forms.Button Yellow;
+        private System.Windows.Forms.Button Green;
+        private System.Windows.Forms.Button negro;
+        private System.Windows.Forms.Button Brown;
+        private System.Windows.Forms.Button Red;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox CB_TAM;
+        private System.Windows.Forms.Button Borrador;
+        private System.Windows.Forms.Label L_estado;
+        private System.Windows.Forms.Button B_camara;
     }
 }
 

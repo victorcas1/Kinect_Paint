@@ -12,3 +12,11 @@ c:\users\acer1\documents\visual studio 2015\Projects\Paint_Kinect\Paint_Kinect\o
 C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\bin\Debug\Paint_Kinect.exe.config
 C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\obj\Debug\Paint_Kinect.exe
 C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\obj\Debug\Paint_Kinect.pdb
+C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\bin\Debug\Paint_Kinect.exe
+C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\bin\Debug\Paint_Kinect.pdb
+C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\bin\Debug\Microsoft.Kinect.dll
+C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\bin\Debug\Microsoft.Kinect.xml
+C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\obj\Debug\Paint_Kinect.csprojResolveAssemblyReference.cache
+C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\obj\Debug\Paint_Kinect.Form1.resources
+C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\obj\Debug\Paint_Kinect.Properties.Resources.resources
+C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\obj\Debug\Paint_Kinect.csproj.GenerateResource.Cache
