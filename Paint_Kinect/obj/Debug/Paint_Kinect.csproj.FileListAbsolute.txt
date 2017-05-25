@@ -20,3 +20,4 @@ C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\obj\Debug\Paint
 C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\obj\Debug\Paint_Kinect.Form1.resources
 C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\obj\Debug\Paint_Kinect.Properties.Resources.resources
 C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\obj\Debug\Paint_Kinect.csproj.GenerateResource.Cache
+C:\Users\acer1\Documents\Visual Studio\Kinect_Paint\Paint_Kinect\bin\Debug\Microsoft.Speech.dll

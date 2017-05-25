@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Kinect;
+using Microsoft.Speech;
+using Microsoft.Speech.AudioFormat;
+using Microsoft.Speech.Recognition;
+using System.Windows.Documents;
+
 
 namespace Paint_Kinect
 {
@@ -22,7 +27,10 @@ namespace Paint_Kinect
         Graphics g;
         private int[] antx = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         private int[] anty= new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        
+        private List<Span> recognitionSpans;
+        private SpeechRecognitionEngine speechEngine;
+        System.Media.SoundPlayer sonido = new System.Media.SoundPlayer(Application.StartupPath + "/756.wav");
+
         public Form1()
         {
             InitializeComponent();
@@ -140,6 +148,20 @@ namespace Paint_Kinect
                 anty[9] = 0;
             }
         }
+        private static RecognizerInfo GetKinectRecognizer()
+        {
+            foreach (RecognizerInfo recognizer in SpeechRecognitionEngine.InstalledRecognizers())
+            {
+                string value;
+                recognizer.AdditionalInfo.TryGetValue("Kinect", out value);
+                if ("True".Equals(value, StringComparison.OrdinalIgnoreCase) && "es-ES".Equals(recognizer.Culture.Name, StringComparison.OrdinalIgnoreCase))
+                {
+                    return recognizer;
+                }
+            }
+
+            return null;
+        }
         private void reconect()
         {
             if (KinectSensor.KinectSensors.Count > 0)
@@ -165,6 +187,42 @@ namespace Paint_Kinect
                 return;
             }
             L_estado.Text = "";
+            RecognizerInfo ri = GetKinectRecognizer();
+
+            if (null != ri)
+            {
+                this.speechEngine = new SpeechRecognitionEngine(ri.Id);
+               
+                var directions = new Choices();
+                directions.Add(new SemanticResultValue("pequeño", "PEQUEÑO"));
+                directions.Add(new SemanticResultValue("mediano", "MEDIANO"));
+                directions.Add(new SemanticResultValue("grande", "GRANDE"));
+                directions.Add(new SemanticResultValue("foto", "FOTO"));
+                directions.Add(new SemanticResultValue("negro", "C_NEGRO"));
+                directions.Add(new SemanticResultValue("gris", "C_GRIS"));
+                directions.Add(new SemanticResultValue("blanco", "C_BLANCO"));
+                directions.Add(new SemanticResultValue("rojo", "C_ROJO"));
+                directions.Add(new SemanticResultValue("naranja", "C_NARANJA"));
+                directions.Add(new SemanticResultValue("rosa", "C_ROSA"));
+                directions.Add(new SemanticResultValue("amarillo", "C_AMARILLO"));
+                directions.Add(new SemanticResultValue("azul", "C_AZUL"));
+                directions.Add(new SemanticResultValue("verde", "C_VERDE"));
+                directions.Add(new SemanticResultValue("morado", "C_MORADO"));
+                directions.Add(new SemanticResultValue("borrar", "BORRAR"));
+
+                var gb = new GrammarBuilder { Culture = ri.Culture };
+                gb.Append(directions);
+
+                var g = new Grammar(gb);
+                speechEngine.LoadGrammar(g);
+                
+                speechEngine.SpeechRecognized += SpeechRecognized;
+
+                
+                speechEngine.SetInputToAudioStream(
+                    sensor.AudioSource.Start(), new SpeechAudioFormatInfo(EncodingFormat.Pcm, 16000, 16, 1, 32000, 2, null));
+                speechEngine.RecognizeAsync(RecognizeMode.Multiple);
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -271,25 +329,95 @@ namespace Paint_Kinect
             color_elejido = Color.Purple;
             B_Selec.BackColor = color_elejido;
         }
-
-        private void B_camara_Click(object sender, EventArgs e)
+        private void photo()
         {
             Bitmap bmpPicture = new Bitmap(640, 480);
             Graphics img = Graphics.FromImage(bmpPicture);
             //Graphics img = Graphics.FromImage(PB_Lienzo.Image);
             img.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            if(PB_Lienzo.Image!=null)
+            if (PB_Lienzo.Image != null)
             {
                 img.DrawImage(PB_Lienzo.Image, new Point(0, 0));
-            }else
+            }
+            else
             {
                 img.FillRectangle(new SolidBrush(Color.White), 0, 0, 640, 480);
             }
             img.DrawImage(PB_Lienzo2.Image, new Point(0, 0));
-            //Image image = img;
-            //Bitmap bmpPicture = new Bitmap(640, 480, img);
-            //img.DrawImage(bmpPicture, 640, 480);
             bmpPicture.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Imagen" + DateTime.Now.ToString("ddmmyyyyhhmmss") + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+        }
+
+        private void B_camara_Click(object sender, EventArgs e)
+        {
+            photo();
+
+        }
+        private void SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+            const double ConfidenceThreshold = 0.3;
+            if (e.Result.Confidence >= ConfidenceThreshold)
+            {
+                switch (e.Result.Semantics.Value.ToString())
+                {
+                    case "PEQUEÑO":
+                        CB_TAM.SelectedIndex = 1;
+                       break;
+                    case "MEDIANO":
+                        CB_TAM.SelectedIndex = 5;
+                        break;
+                    case "GRANDE":
+                        CB_TAM.SelectedIndex = 8;
+                        break;
+                    case "C_ROJO":
+                        B_Selec.BackColor = Color.Red;
+                        color_elejido = B_Selec.BackColor;
+                        break;
+                    case "C_NEGRO":
+                        B_Selec.BackColor = Color.Black;
+                        color_elejido = B_Selec.BackColor;
+                        break;
+                    case "C_BLANCO":
+                        B_Selec.BackColor = Color.White;
+                        color_elejido = B_Selec.BackColor;
+                        break;
+                    case "C_GRIS":
+                        B_Selec.BackColor = Color.Gray;
+                        color_elejido = B_Selec.BackColor;
+                        break;
+                    case "C_NARANJA":
+                        B_Selec.BackColor = Color.Orange;
+                        color_elejido = B_Selec.BackColor;
+                        break;
+                    case "C_ROSA":
+                        B_Selec.BackColor = Color.Pink;
+                        color_elejido = B_Selec.BackColor;
+                        break;
+                    case "C_AMARILLO":
+                        B_Selec.BackColor = Color.Yellow;
+                        color_elejido = B_Selec.BackColor;
+                        break;
+                    case "C_AZUL":
+                        B_Selec.BackColor = Color.Blue;
+                        color_elejido = B_Selec.BackColor;
+                        break;
+                    case "C_VERDE":
+                        B_Selec.BackColor = Color.Green;
+                        color_elejido = B_Selec.BackColor;
+                        break;
+                    case "C_MORADO":
+                        B_Selec.BackColor = Color.Purple;
+                        color_elejido = B_Selec.BackColor;
+                        break;
+                    case "FOTO":
+                        photo();
+                        sonido.Play();
+                        break;
+                    case "BORRAR":
+                        PB_Lienzo2.Invalidate();
+                        PB_Lienzo2.Image = new Bitmap(640, 480);
+                        break;
+                }
+            }
         }
     }
 }

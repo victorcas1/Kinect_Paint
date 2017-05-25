@@ -35,17 +35,16 @@
             this.PB_Lienzo2 = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.Colores = new System.Windows.Forms.GroupBox();
-            this.RoyalBlue = new System.Windows.Forms.Button();
-            this.OrangeRed = new System.Windows.Forms.Button();
-            this.blanco = new System.Windows.Forms.Button();
+            this.Blue = new System.Windows.Forms.Button();
+            this.Orange = new System.Windows.Forms.Button();
+            this.White = new System.Windows.Forms.Button();
             this.Gray = new System.Windows.Forms.Button();
             this.Pink = new System.Windows.Forms.Button();
             this.Purple = new System.Windows.Forms.Button();
             this.B_Selec = new System.Windows.Forms.Button();
             this.Yellow = new System.Windows.Forms.Button();
             this.Green = new System.Windows.Forms.Button();
-            this.negro = new System.Windows.Forms.Button();
-            this.Brown = new System.Windows.Forms.Button();
+            this.Black = new System.Windows.Forms.Button();
             this.Red = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.CB_TAM = new System.Windows.Forms.ComboBox();
@@ -116,57 +115,56 @@
             this.Colores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Colores.BackColor = System.Drawing.Color.Transparent;
             this.Colores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Colores.Controls.Add(this.RoyalBlue);
-            this.Colores.Controls.Add(this.OrangeRed);
-            this.Colores.Controls.Add(this.blanco);
+            this.Colores.Controls.Add(this.Blue);
+            this.Colores.Controls.Add(this.Orange);
+            this.Colores.Controls.Add(this.White);
             this.Colores.Controls.Add(this.Gray);
             this.Colores.Controls.Add(this.Pink);
             this.Colores.Controls.Add(this.Purple);
             this.Colores.Controls.Add(this.B_Selec);
             this.Colores.Controls.Add(this.Yellow);
             this.Colores.Controls.Add(this.Green);
-            this.Colores.Controls.Add(this.negro);
-            this.Colores.Controls.Add(this.Brown);
+            this.Colores.Controls.Add(this.Black);
             this.Colores.Controls.Add(this.Red);
             this.Colores.Location = new System.Drawing.Point(828, 56);
             this.Colores.Name = "Colores";
-            this.Colores.Size = new System.Drawing.Size(82, 277);
+            this.Colores.Size = new System.Drawing.Size(82, 244);
             this.Colores.TabIndex = 4;
             this.Colores.TabStop = false;
             this.Colores.Text = "Colores";
             // 
-            // RoyalBlue
+            // Blue
             // 
-            this.RoyalBlue.BackColor = System.Drawing.Color.RoyalBlue;
-            this.RoyalBlue.Location = new System.Drawing.Point(8, 205);
-            this.RoyalBlue.Margin = new System.Windows.Forms.Padding(1);
-            this.RoyalBlue.Name = "RoyalBlue";
-            this.RoyalBlue.Size = new System.Drawing.Size(30, 30);
-            this.RoyalBlue.TabIndex = 19;
-            this.RoyalBlue.UseVisualStyleBackColor = false;
-            this.RoyalBlue.Click += new System.EventHandler(this.RoyalBlue_Click);
+            this.Blue.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Blue.Location = new System.Drawing.Point(8, 205);
+            this.Blue.Margin = new System.Windows.Forms.Padding(1);
+            this.Blue.Name = "Blue";
+            this.Blue.Size = new System.Drawing.Size(30, 30);
+            this.Blue.TabIndex = 19;
+            this.Blue.UseVisualStyleBackColor = false;
+            this.Blue.Click += new System.EventHandler(this.RoyalBlue_Click);
             // 
-            // OrangeRed
+            // Orange
             // 
-            this.OrangeRed.BackColor = System.Drawing.Color.Orange;
-            this.OrangeRed.Location = new System.Drawing.Point(45, 141);
-            this.OrangeRed.Margin = new System.Windows.Forms.Padding(1);
-            this.OrangeRed.Name = "OrangeRed";
-            this.OrangeRed.Size = new System.Drawing.Size(30, 30);
-            this.OrangeRed.TabIndex = 15;
-            this.OrangeRed.UseVisualStyleBackColor = false;
-            this.OrangeRed.Click += new System.EventHandler(this.OrangeRed_Click);
+            this.Orange.BackColor = System.Drawing.Color.Orange;
+            this.Orange.Location = new System.Drawing.Point(45, 109);
+            this.Orange.Margin = new System.Windows.Forms.Padding(1);
+            this.Orange.Name = "Orange";
+            this.Orange.Size = new System.Drawing.Size(30, 30);
+            this.Orange.TabIndex = 15;
+            this.Orange.UseVisualStyleBackColor = false;
+            this.Orange.Click += new System.EventHandler(this.OrangeRed_Click);
             // 
-            // blanco
+            // White
             // 
-            this.blanco.BackColor = System.Drawing.Color.White;
-            this.blanco.Location = new System.Drawing.Point(8, 109);
-            this.blanco.Margin = new System.Windows.Forms.Padding(1);
-            this.blanco.Name = "blanco";
-            this.blanco.Size = new System.Drawing.Size(30, 30);
-            this.blanco.TabIndex = 11;
-            this.blanco.UseVisualStyleBackColor = false;
-            this.blanco.Click += new System.EventHandler(this.blanco_Click);
+            this.White.BackColor = System.Drawing.Color.White;
+            this.White.Location = new System.Drawing.Point(8, 109);
+            this.White.Margin = new System.Windows.Forms.Padding(1);
+            this.White.Name = "White";
+            this.White.Size = new System.Drawing.Size(30, 30);
+            this.White.TabIndex = 11;
+            this.White.UseVisualStyleBackColor = false;
+            this.White.Click += new System.EventHandler(this.blanco_Click);
             // 
             // Gray
             // 
@@ -193,7 +191,7 @@
             // Purple
             // 
             this.Purple.BackColor = System.Drawing.Color.Purple;
-            this.Purple.Location = new System.Drawing.Point(45, 237);
+            this.Purple.Location = new System.Drawing.Point(45, 205);
             this.Purple.Margin = new System.Windows.Forms.Padding(1);
             this.Purple.Name = "Purple";
             this.Purple.Size = new System.Drawing.Size(30, 30);
@@ -214,7 +212,7 @@
             // Yellow
             // 
             this.Yellow.BackColor = System.Drawing.Color.Yellow;
-            this.Yellow.Location = new System.Drawing.Point(45, 173);
+            this.Yellow.Location = new System.Drawing.Point(45, 141);
             this.Yellow.Margin = new System.Windows.Forms.Padding(1);
             this.Yellow.Name = "Yellow";
             this.Yellow.Size = new System.Drawing.Size(30, 30);
@@ -225,7 +223,7 @@
             // Green
             // 
             this.Green.BackColor = System.Drawing.Color.Green;
-            this.Green.Location = new System.Drawing.Point(45, 205);
+            this.Green.Location = new System.Drawing.Point(45, 173);
             this.Green.Margin = new System.Windows.Forms.Padding(1);
             this.Green.Name = "Green";
             this.Green.Size = new System.Drawing.Size(30, 30);
@@ -233,27 +231,16 @@
             this.Green.UseVisualStyleBackColor = false;
             this.Green.Click += new System.EventHandler(this.Green_Click);
             // 
-            // negro
+            // Black
             // 
-            this.negro.BackColor = System.Drawing.Color.Black;
-            this.negro.Location = new System.Drawing.Point(8, 77);
-            this.negro.Margin = new System.Windows.Forms.Padding(1);
-            this.negro.Name = "negro";
-            this.negro.Size = new System.Drawing.Size(30, 30);
-            this.negro.TabIndex = 1;
-            this.negro.UseVisualStyleBackColor = false;
-            this.negro.Click += new System.EventHandler(this.negro_Click);
-            // 
-            // Brown
-            // 
-            this.Brown.BackColor = System.Drawing.Color.Brown;
-            this.Brown.Location = new System.Drawing.Point(45, 109);
-            this.Brown.Margin = new System.Windows.Forms.Padding(1);
-            this.Brown.Name = "Brown";
-            this.Brown.Size = new System.Drawing.Size(30, 30);
-            this.Brown.TabIndex = 3;
-            this.Brown.UseVisualStyleBackColor = false;
-            this.Brown.Click += new System.EventHandler(this.Brown_Click);
+            this.Black.BackColor = System.Drawing.Color.Black;
+            this.Black.Location = new System.Drawing.Point(8, 77);
+            this.Black.Margin = new System.Windows.Forms.Padding(1);
+            this.Black.Name = "Black";
+            this.Black.Size = new System.Drawing.Size(30, 30);
+            this.Black.TabIndex = 1;
+            this.Black.UseVisualStyleBackColor = false;
+            this.Black.Click += new System.EventHandler(this.negro_Click);
             // 
             // Red
             // 
@@ -379,17 +366,16 @@
         private System.Windows.Forms.PictureBox PB_Lienzo2;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.GroupBox Colores;
-        private System.Windows.Forms.Button RoyalBlue;
-        private System.Windows.Forms.Button OrangeRed;
-        private System.Windows.Forms.Button blanco;
+        private System.Windows.Forms.Button Blue;
+        private System.Windows.Forms.Button Orange;
+        private System.Windows.Forms.Button White;
         private System.Windows.Forms.Button Gray;
         private System.Windows.Forms.Button Pink;
         private System.Windows.Forms.Button Purple;
         private System.Windows.Forms.Button B_Selec;
         private System.Windows.Forms.Button Yellow;
         private System.Windows.Forms.Button Green;
-        private System.Windows.Forms.Button negro;
-        private System.Windows.Forms.Button Brown;
+        private System.Windows.Forms.Button Black;
         private System.Windows.Forms.Button Red;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CB_TAM;
