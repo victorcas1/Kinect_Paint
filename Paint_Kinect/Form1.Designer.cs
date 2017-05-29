@@ -33,7 +33,6 @@
             this.B_conect = new System.Windows.Forms.Button();
             this.Status_kinect = new System.Windows.Forms.Label();
             this.PB_Lienzo2 = new System.Windows.Forms.PictureBox();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.Colores = new System.Windows.Forms.GroupBox();
             this.Blue = new System.Windows.Forms.Button();
             this.Orange = new System.Windows.Forms.Button();
@@ -41,19 +40,31 @@
             this.Gray = new System.Windows.Forms.Button();
             this.Pink = new System.Windows.Forms.Button();
             this.Purple = new System.Windows.Forms.Button();
-            this.B_Selec = new System.Windows.Forms.Button();
             this.Yellow = new System.Windows.Forms.Button();
             this.Green = new System.Windows.Forms.Button();
             this.Black = new System.Windows.Forms.Button();
             this.Red = new System.Windows.Forms.Button();
+            this.B_Selec2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.CB_TAM = new System.Windows.Forms.ComboBox();
             this.Borrador = new System.Windows.Forms.Button();
             this.L_estado = new System.Windows.Forms.Label();
             this.B_camara = new System.Windows.Forms.Button();
+            this.B_Selec1 = new System.Windows.Forms.Button();
+            this.Ayuda = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lienzo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lienzo2)).BeginInit();
             this.Colores.SuspendLayout();
+            this.Ayuda.SuspendLayout();
             this.SuspendLayout();
             // 
             // PB_Lienzo
@@ -64,9 +75,9 @@
             this.PB_Lienzo.BackColor = System.Drawing.Color.White;
             this.PB_Lienzo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PB_Lienzo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.PB_Lienzo.Location = new System.Drawing.Point(12, 56);
+            this.PB_Lienzo.Location = new System.Drawing.Point(16, 63);
             this.PB_Lienzo.Name = "PB_Lienzo";
-            this.PB_Lienzo.Size = new System.Drawing.Size(792, 415);
+            this.PB_Lienzo.Size = new System.Drawing.Size(809, 408);
             this.PB_Lienzo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Lienzo.TabIndex = 0;
             this.PB_Lienzo.TabStop = false;
@@ -99,9 +110,9 @@
             this.PB_Lienzo2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PB_Lienzo2.ErrorImage = null;
             this.PB_Lienzo2.InitialImage = null;
-            this.PB_Lienzo2.Location = new System.Drawing.Point(12, 56);
+            this.PB_Lienzo2.Location = new System.Drawing.Point(16, 63);
             this.PB_Lienzo2.Name = "PB_Lienzo2";
-            this.PB_Lienzo2.Size = new System.Drawing.Size(792, 415);
+            this.PB_Lienzo2.Size = new System.Drawing.Size(809, 408);
             this.PB_Lienzo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Lienzo2.TabIndex = 3;
             this.PB_Lienzo2.TabStop = false;
@@ -121,14 +132,13 @@
             this.Colores.Controls.Add(this.Gray);
             this.Colores.Controls.Add(this.Pink);
             this.Colores.Controls.Add(this.Purple);
-            this.Colores.Controls.Add(this.B_Selec);
             this.Colores.Controls.Add(this.Yellow);
             this.Colores.Controls.Add(this.Green);
             this.Colores.Controls.Add(this.Black);
             this.Colores.Controls.Add(this.Red);
-            this.Colores.Location = new System.Drawing.Point(828, 56);
+            this.Colores.Location = new System.Drawing.Point(395, 4);
             this.Colores.Name = "Colores";
-            this.Colores.Size = new System.Drawing.Size(82, 244);
+            this.Colores.Size = new System.Drawing.Size(341, 53);
             this.Colores.TabIndex = 4;
             this.Colores.TabStop = false;
             this.Colores.Text = "Colores";
@@ -136,7 +146,7 @@
             // Blue
             // 
             this.Blue.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Blue.Location = new System.Drawing.Point(8, 205);
+            this.Blue.Location = new System.Drawing.Point(136, 17);
             this.Blue.Margin = new System.Windows.Forms.Padding(1);
             this.Blue.Name = "Blue";
             this.Blue.Size = new System.Drawing.Size(30, 30);
@@ -147,7 +157,7 @@
             // Orange
             // 
             this.Orange.BackColor = System.Drawing.Color.Orange;
-            this.Orange.Location = new System.Drawing.Point(45, 109);
+            this.Orange.Location = new System.Drawing.Point(168, 17);
             this.Orange.Margin = new System.Windows.Forms.Padding(1);
             this.Orange.Name = "Orange";
             this.Orange.Size = new System.Drawing.Size(30, 30);
@@ -158,7 +168,7 @@
             // White
             // 
             this.White.BackColor = System.Drawing.Color.White;
-            this.White.Location = new System.Drawing.Point(8, 109);
+            this.White.Location = new System.Drawing.Point(72, 17);
             this.White.Margin = new System.Windows.Forms.Padding(1);
             this.White.Name = "White";
             this.White.Size = new System.Drawing.Size(30, 30);
@@ -169,7 +179,7 @@
             // Gray
             // 
             this.Gray.BackColor = System.Drawing.Color.Gray;
-            this.Gray.Location = new System.Drawing.Point(45, 77);
+            this.Gray.Location = new System.Drawing.Point(40, 17);
             this.Gray.Margin = new System.Windows.Forms.Padding(1);
             this.Gray.Name = "Gray";
             this.Gray.Size = new System.Drawing.Size(30, 30);
@@ -180,7 +190,7 @@
             // Pink
             // 
             this.Pink.BackColor = System.Drawing.Color.Pink;
-            this.Pink.Location = new System.Drawing.Point(8, 173);
+            this.Pink.Location = new System.Drawing.Point(104, 17);
             this.Pink.Margin = new System.Windows.Forms.Padding(1);
             this.Pink.Name = "Pink";
             this.Pink.Size = new System.Drawing.Size(30, 30);
@@ -191,7 +201,7 @@
             // Purple
             // 
             this.Purple.BackColor = System.Drawing.Color.Purple;
-            this.Purple.Location = new System.Drawing.Point(45, 205);
+            this.Purple.Location = new System.Drawing.Point(264, 17);
             this.Purple.Margin = new System.Windows.Forms.Padding(1);
             this.Purple.Name = "Purple";
             this.Purple.Size = new System.Drawing.Size(30, 30);
@@ -199,20 +209,10 @@
             this.Purple.UseVisualStyleBackColor = false;
             this.Purple.Click += new System.EventHandler(this.Purple_Click);
             // 
-            // B_Selec
-            // 
-            this.B_Selec.BackColor = System.Drawing.Color.Black;
-            this.B_Selec.Enabled = false;
-            this.B_Selec.Location = new System.Drawing.Point(6, 20);
-            this.B_Selec.Name = "B_Selec";
-            this.B_Selec.Size = new System.Drawing.Size(70, 53);
-            this.B_Selec.TabIndex = 0;
-            this.B_Selec.UseVisualStyleBackColor = false;
-            // 
             // Yellow
             // 
             this.Yellow.BackColor = System.Drawing.Color.Yellow;
-            this.Yellow.Location = new System.Drawing.Point(45, 141);
+            this.Yellow.Location = new System.Drawing.Point(200, 17);
             this.Yellow.Margin = new System.Windows.Forms.Padding(1);
             this.Yellow.Name = "Yellow";
             this.Yellow.Size = new System.Drawing.Size(30, 30);
@@ -223,7 +223,7 @@
             // Green
             // 
             this.Green.BackColor = System.Drawing.Color.Green;
-            this.Green.Location = new System.Drawing.Point(45, 173);
+            this.Green.Location = new System.Drawing.Point(296, 17);
             this.Green.Margin = new System.Windows.Forms.Padding(1);
             this.Green.Name = "Green";
             this.Green.Size = new System.Drawing.Size(30, 30);
@@ -234,7 +234,7 @@
             // Black
             // 
             this.Black.BackColor = System.Drawing.Color.Black;
-            this.Black.Location = new System.Drawing.Point(8, 77);
+            this.Black.Location = new System.Drawing.Point(8, 17);
             this.Black.Margin = new System.Windows.Forms.Padding(1);
             this.Black.Name = "Black";
             this.Black.Size = new System.Drawing.Size(30, 30);
@@ -245,7 +245,7 @@
             // Red
             // 
             this.Red.BackColor = System.Drawing.Color.Red;
-            this.Red.Location = new System.Drawing.Point(8, 141);
+            this.Red.Location = new System.Drawing.Point(232, 17);
             this.Red.Margin = new System.Windows.Forms.Padding(1);
             this.Red.Name = "Red";
             this.Red.Size = new System.Drawing.Size(30, 30);
@@ -253,11 +253,24 @@
             this.Red.UseVisualStyleBackColor = false;
             this.Red.Click += new System.EventHandler(this.Red_Click);
             // 
+            // B_Selec2
+            // 
+            this.B_Selec2.BackColor = System.Drawing.Color.Black;
+            this.B_Selec2.Enabled = false;
+            this.B_Selec2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.B_Selec2.ForeColor = System.Drawing.Color.Aquamarine;
+            this.B_Selec2.Location = new System.Drawing.Point(755, 21);
+            this.B_Selec2.Name = "B_Selec2";
+            this.B_Selec2.Size = new System.Drawing.Size(70, 33);
+            this.B_Selec2.TabIndex = 0;
+            this.B_Selec2.UseVisualStyleBackColor = false;
+            // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(836, 423);
+            this.label1.Location = new System.Drawing.Point(844, 274);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 15);
             this.label1.TabIndex = 17;
@@ -284,7 +297,7 @@
             "60",
             "80",
             "100"});
-            this.CB_TAM.Location = new System.Drawing.Point(834, 450);
+            this.CB_TAM.Location = new System.Drawing.Point(842, 301);
             this.CB_TAM.MaxDropDownItems = 100;
             this.CB_TAM.Name = "CB_TAM";
             this.CB_TAM.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -298,10 +311,10 @@
             this.Borrador.BackColor = System.Drawing.Color.Transparent;
             this.Borrador.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Borrador.BackgroundImage")));
             this.Borrador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Borrador.Location = new System.Drawing.Point(828, 347);
+            this.Borrador.Location = new System.Drawing.Point(839, 176);
             this.Borrador.Margin = new System.Windows.Forms.Padding(1);
             this.Borrador.Name = "Borrador";
-            this.Borrador.Size = new System.Drawing.Size(82, 47);
+            this.Borrador.Size = new System.Drawing.Size(64, 47);
             this.Borrador.TabIndex = 14;
             this.Borrador.UseVisualStyleBackColor = false;
             this.Borrador.Click += new System.EventHandler(this.Borrador_Click);
@@ -321,24 +334,155 @@
             // 
             this.B_camara.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_camara.BackgroundImage")));
             this.B_camara.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.B_camara.Location = new System.Drawing.Point(737, 2);
+            this.B_camara.Location = new System.Drawing.Point(837, 100);
             this.B_camara.Name = "B_camara";
             this.B_camara.Size = new System.Drawing.Size(67, 51);
             this.B_camara.TabIndex = 20;
             this.B_camara.UseVisualStyleBackColor = true;
             this.B_camara.Click += new System.EventHandler(this.B_camara_Click);
             // 
+            // B_Selec1
+            // 
+            this.B_Selec1.BackColor = System.Drawing.Color.Black;
+            this.B_Selec1.Enabled = false;
+            this.B_Selec1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.B_Selec1.ForeColor = System.Drawing.Color.Aquamarine;
+            this.B_Selec1.Location = new System.Drawing.Point(302, 21);
+            this.B_Selec1.Name = "B_Selec1";
+            this.B_Selec1.Size = new System.Drawing.Size(74, 33);
+            this.B_Selec1.TabIndex = 21;
+            this.B_Selec1.UseVisualStyleBackColor = false;
+            // 
+            // Ayuda
+            // 
+            this.Ayuda.BackColor = System.Drawing.Color.White;
+            this.Ayuda.Controls.Add(this.label8);
+            this.Ayuda.Controls.Add(this.label7);
+            this.Ayuda.Controls.Add(this.label6);
+            this.Ayuda.Controls.Add(this.label5);
+            this.Ayuda.Controls.Add(this.label4);
+            this.Ayuda.Controls.Add(this.label3);
+            this.Ayuda.Controls.Add(this.label2);
+            this.Ayuda.Location = new System.Drawing.Point(223, 100);
+            this.Ayuda.Name = "Ayuda";
+            this.Ayuda.Size = new System.Drawing.Size(357, 275);
+            this.Ayuda.TabIndex = 22;
+            this.Ayuda.TabStop = false;
+            this.Ayuda.Text = "Ayuda";
+            this.Ayuda.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(28, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Seleccionar Colores";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(58, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 160);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Negro\r\nGris\r\nBlanco\r\nRosa\r\nAzul\r\nNaranja\r\nAmarillo\r\nRojo\r\nMorado\r\nVerde";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(244, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Opciones";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(253, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 32);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Foto\r\nBorrar\r\n";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(244, 156);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 16);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Tamaño";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(244, 188);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 48);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Pequeño\r\nMediano\r\nGrande";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(93, 252);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(154, 16);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Cerrar Ayuda : Cerrar";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(307, 3);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 16);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Circulo";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(758, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 16);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Cuadrado";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 497);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.Ayuda);
+            this.Controls.Add(this.B_Selec1);
             this.Controls.Add(this.B_camara);
             this.Controls.Add(this.L_estado);
             this.Controls.Add(this.CB_TAM);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Borrador);
             this.Controls.Add(this.Colores);
+            this.Controls.Add(this.B_Selec2);
             this.Controls.Add(this.PB_Lienzo2);
             this.Controls.Add(this.Status_kinect);
             this.Controls.Add(this.B_conect);
@@ -353,6 +497,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lienzo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lienzo2)).EndInit();
             this.Colores.ResumeLayout(false);
+            this.Ayuda.ResumeLayout(false);
+            this.Ayuda.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +510,6 @@
         private System.Windows.Forms.Button B_conect;
         private System.Windows.Forms.Label Status_kinect;
         private System.Windows.Forms.PictureBox PB_Lienzo2;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.GroupBox Colores;
         private System.Windows.Forms.Button Blue;
         private System.Windows.Forms.Button Orange;
@@ -372,7 +517,7 @@
         private System.Windows.Forms.Button Gray;
         private System.Windows.Forms.Button Pink;
         private System.Windows.Forms.Button Purple;
-        private System.Windows.Forms.Button B_Selec;
+        private System.Windows.Forms.Button B_Selec2;
         private System.Windows.Forms.Button Yellow;
         private System.Windows.Forms.Button Green;
         private System.Windows.Forms.Button Black;
@@ -382,6 +527,17 @@
         private System.Windows.Forms.Button Borrador;
         private System.Windows.Forms.Label L_estado;
         private System.Windows.Forms.Button B_camara;
+        private System.Windows.Forms.Button B_Selec1;
+        private System.Windows.Forms.GroupBox Ayuda;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
 
