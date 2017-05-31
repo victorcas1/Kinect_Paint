@@ -26,13 +26,13 @@ namespace Paint_Kinect
         private double tolerancia = 0.40;
         Graphics g;
         private int[] antx = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        private int[] anty= new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        private int[] anty = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         private List<Span> recognitionSpans;
         private SpeechRecognitionEngine speechEngine;
         System.Media.SoundPlayer sonido = new System.Media.SoundPlayer(Application.StartupPath + "/756.wav");
-        Color color1=Color.Black;
+        Color color1 = Color.Black;
         Color color2 = Color.Black;
-        private int jugador_sel=1;
+        private int jugador_sel = 1;
         Skeleton[] esqueletos;
         int[] esq = { -1, -1 };
         int tam1 = 25;
@@ -51,6 +51,12 @@ namespace Paint_Kinect
             PB_Lienzo2.Image = new Bitmap(640, 480);
             CB_TAM.SelectedIndex = 5;
             grosor = Int32.Parse((string)CB_TAM.SelectedItem);
+            B_Selec1.FlatStyle = FlatStyle.Flat;
+            B_Selec1.FlatAppearance.BorderSize = 5;
+            B_Selec1.FlatAppearance.BorderColor = Color.LightGreen;
+            B_Selec2.FlatStyle = FlatStyle.Flat;
+            B_Selec2.FlatAppearance.BorderSize = 0;
+            B_Selec2.FlatAppearance.BorderColor = Color.White;
             reconect();
         }
 
@@ -329,67 +335,166 @@ namespace Paint_Kinect
         private void negro_Click(object sender, EventArgs e)
         {
             color_elejido = Color.Black;
-            B_Selec2.BackColor = color_elejido;
+            if (jugador_sel == 1)
+            {
+                B_Selec1.BackColor = color_elejido;
+                color1 = B_Selec1.BackColor;
+            }
+            else
+            {
+                B_Selec2.BackColor = color_elejido;
+                color2 = B_Selec2.BackColor;
+            }
         }
 
         private void Gray_Click(object sender, EventArgs e)
         {
             color_elejido = Color.Gray;
-            B_Selec2.BackColor = color_elejido;
+            if (jugador_sel == 1)
+            {
+                B_Selec1.BackColor = color_elejido;
+                color1 = B_Selec1.BackColor;
+            }
+            else
+            {
+                B_Selec2.BackColor = color_elejido;
+                color2 = B_Selec2.BackColor;
+            }
         }
 
         private void blanco_Click(object sender, EventArgs e)
         {
             color_elejido = Color.White;
-            B_Selec2.BackColor = color_elejido;
+            if (jugador_sel == 1)
+            {
+                B_Selec1.BackColor = color_elejido;
+                color1 = B_Selec1.BackColor;
+            }
+            else
+            {
+                B_Selec2.BackColor = color_elejido;
+                color2 = B_Selec2.BackColor;
+            }
         }
 
         private void Brown_Click(object sender, EventArgs e)
         {
             color_elejido = Color.Brown;
-            B_Selec2.BackColor = color_elejido;
+            if (jugador_sel == 1)
+            {
+                B_Selec1.BackColor = color_elejido;
+                color1 = B_Selec1.BackColor;
+            }
+            else
+            {
+                B_Selec2.BackColor = color_elejido;
+                color2 = B_Selec2.BackColor;
+            }
         }
 
         private void Red_Click(object sender, EventArgs e)
         {
             color_elejido = Color.Red;
-            B_Selec2.BackColor = color_elejido;
+            if (jugador_sel == 1)
+            {
+                B_Selec1.BackColor = color_elejido;
+                color1 = B_Selec1.BackColor;
+            }
+            else
+            {
+                B_Selec2.BackColor = color_elejido;
+                color2 = B_Selec2.BackColor;
+            }
         }
 
         private void Yellow_Click(object sender, EventArgs e)
         {
             color_elejido = Color.Yellow;
-            B_Selec2.BackColor = color_elejido;
+            if (jugador_sel == 1)
+            {
+                B_Selec1.BackColor = color_elejido;
+                color1 = B_Selec1.BackColor;
+            }
+            else
+            {
+                B_Selec2.BackColor = color_elejido;
+                color2 = B_Selec2.BackColor;
+            }
         }
 
         private void Pink_Click(object sender, EventArgs e)
         {
             color_elejido = Color.Pink;
-            B_Selec2.BackColor = color_elejido;
+            if (jugador_sel == 1)
+            {
+                B_Selec1.BackColor = color_elejido;
+                color1 = B_Selec1.BackColor;
+            }
+            else
+            {
+                B_Selec2.BackColor = color_elejido;
+                color2 = B_Selec2.BackColor;
+            }
         }
 
         private void OrangeRed_Click(object sender, EventArgs e)
         {
             color_elejido = Color.Orange;
-            B_Selec2.BackColor = color_elejido;
+            if (jugador_sel == 1)
+            {
+                B_Selec1.BackColor = color_elejido;
+                color1 = B_Selec1.BackColor;
+            }
+            else
+            {
+                B_Selec2.BackColor = color_elejido;
+                color2 = B_Selec2.BackColor;
+            }
         }
 
         private void RoyalBlue_Click(object sender, EventArgs e)
         {
             color_elejido = Color.Blue;
-            B_Selec2.BackColor = color_elejido;
+            if (jugador_sel == 1)
+            {
+                B_Selec1.BackColor = color_elejido;
+                color1 = B_Selec1.BackColor;
+            }
+            else
+            {
+                B_Selec2.BackColor = color_elejido;
+                color2 = B_Selec2.BackColor;
+            }
         }
 
         private void Green_Click(object sender, EventArgs e)
         {
             color_elejido = Color.Green;
-            B_Selec2.BackColor = color_elejido;
+            if (jugador_sel == 1)
+            {
+                B_Selec1.BackColor = color_elejido;
+                color1 = B_Selec1.BackColor;
+            }
+            else
+            {
+                B_Selec2.BackColor = color_elejido;
+                color2 = B_Selec2.BackColor;
+            }
         }
 
         private void Purple_Click(object sender, EventArgs e)
         {
             color_elejido = Color.Purple;
-            B_Selec2.BackColor = color_elejido;
+            if (jugador_sel == 1)
+            {
+                B_Selec1.BackColor = color_elejido;
+                color1 = B_Selec1.BackColor;
+            }
+            else
+            {
+                B_Selec2.BackColor = color_elejido;
+                color2 = B_Selec2.BackColor;
+            }
         }
         private void photo()
         {
@@ -407,12 +512,12 @@ namespace Paint_Kinect
             }
             img.DrawImage(PB_Lienzo2.Image, new Point(0, 0));
             bmpPicture.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Imagen" + DateTime.Now.ToString("ddmmyyyyhhmmss") + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            sonido.Play();
         }
 
         private void B_camara_Click(object sender, EventArgs e)
         {
             photo();
-
         }
         private void SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
@@ -532,7 +637,6 @@ namespace Paint_Kinect
                         break;
                     case "FOTO":
                         photo();
-                        sonido.Play();
                         break;
                     case "BORRAR":
                         PB_Lienzo2.Invalidate();
@@ -545,15 +649,49 @@ namespace Paint_Kinect
                         Ayuda.Visible = false;
                         break;
                     case "P1":
+                        B_Selec1.FlatStyle = FlatStyle.Flat;
+                        B_Selec1.FlatAppearance.BorderSize = 5;
+                        B_Selec1.FlatAppearance.BorderColor = Color.LightGreen;
+                        B_Selec2.FlatStyle = FlatStyle.Flat;
+                        B_Selec2.FlatAppearance.BorderSize = 0;
+                        B_Selec2.FlatAppearance.BorderColor = Color.White;
                         jugador_sel = 1;
                         break;
                     case "P2":
+                        B_Selec1.FlatStyle = FlatStyle.Flat;
+                        B_Selec1.FlatAppearance.BorderSize = 0;
+                        B_Selec1.FlatAppearance.BorderColor = Color.White;
+                        B_Selec2.FlatStyle = FlatStyle.Flat;
+                        B_Selec2.FlatAppearance.BorderSize = 5;
+                        B_Selec2.FlatAppearance.BorderColor = Color.LightGreen;
                         jugador_sel = 2;
                         break;
                 }
                 color2 = B_Selec2.BackColor;
                 color1 = B_Selec1.BackColor;
             }
+        }
+
+        private void B_Selec1_Click(object sender, EventArgs e)
+        {
+            B_Selec1.FlatStyle = FlatStyle.Flat;
+            B_Selec1.FlatAppearance.BorderSize =5;
+            B_Selec1.FlatAppearance.BorderColor = Color.LightGreen;
+            B_Selec2.FlatStyle = FlatStyle.Flat;
+            B_Selec2.FlatAppearance.BorderSize = 0;
+            B_Selec2.FlatAppearance.BorderColor = Color.White;
+            jugador_sel = 1;
+        }
+
+        private void B_Selec2_Click(object sender, EventArgs e)
+        {
+            B_Selec1.FlatStyle = FlatStyle.Flat;
+            B_Selec1.FlatAppearance.BorderSize = 0;
+            B_Selec1.FlatAppearance.BorderColor = Color.White;
+            B_Selec2.FlatStyle = FlatStyle.Flat;
+            B_Selec2.FlatAppearance.BorderSize = 5;
+            B_Selec2.FlatAppearance.BorderColor = Color.LightGreen;
+            jugador_sel = 2;
         }
     }
 }
