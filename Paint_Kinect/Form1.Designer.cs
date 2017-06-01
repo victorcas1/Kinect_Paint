@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.PB_Lienzo = new System.Windows.Forms.PictureBox();
             this.B_conect = new System.Windows.Forms.Button();
-            this.Status_kinect = new System.Windows.Forms.Label();
             this.PB_Lienzo2 = new System.Windows.Forms.PictureBox();
             this.Colores = new System.Windows.Forms.GroupBox();
             this.Blue = new System.Windows.Forms.Button();
@@ -61,6 +60,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lienzo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lienzo2)).BeginInit();
             this.Colores.SuspendLayout();
@@ -91,14 +92,6 @@
             this.B_conect.Text = "Conectar";
             this.B_conect.UseVisualStyleBackColor = true;
             this.B_conect.Click += new System.EventHandler(this.B_conect_Click);
-            // 
-            // Status_kinect
-            // 
-            this.Status_kinect.AutoSize = true;
-            this.Status_kinect.Location = new System.Drawing.Point(13, 478);
-            this.Status_kinect.Name = "Status_kinect";
-            this.Status_kinect.Size = new System.Drawing.Size(0, 13);
-            this.Status_kinect.TabIndex = 2;
             // 
             // PB_Lienzo2
             // 
@@ -256,6 +249,7 @@
             // B_Selec2
             // 
             this.B_Selec2.BackColor = System.Drawing.Color.Black;
+            this.B_Selec2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B_Selec2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B_Selec2.ForeColor = System.Drawing.Color.Aquamarine;
             this.B_Selec2.Location = new System.Drawing.Point(755, 21);
@@ -345,6 +339,7 @@
             // 
             this.B_Selec1.BackColor = System.Drawing.Color.Black;
             this.B_Selec1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.B_Selec1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B_Selec1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B_Selec1.ForeColor = System.Drawing.Color.Aquamarine;
             this.B_Selec1.Location = new System.Drawing.Point(302, 21);
@@ -357,6 +352,8 @@
             // Ayuda
             // 
             this.Ayuda.BackColor = System.Drawing.Color.White;
+            this.Ayuda.Controls.Add(this.label12);
+            this.Ayuda.Controls.Add(this.label11);
             this.Ayuda.Controls.Add(this.label8);
             this.Ayuda.Controls.Add(this.label7);
             this.Ayuda.Controls.Add(this.label6);
@@ -366,7 +363,7 @@
             this.Ayuda.Controls.Add(this.label2);
             this.Ayuda.Location = new System.Drawing.Point(223, 100);
             this.Ayuda.Name = "Ayuda";
-            this.Ayuda.Size = new System.Drawing.Size(357, 275);
+            this.Ayuda.Size = new System.Drawing.Size(357, 294);
             this.Ayuda.TabIndex = 22;
             this.Ayuda.TabStop = false;
             this.Ayuda.Text = "Ayuda";
@@ -377,7 +374,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(93, 252);
+            this.label8.Location = new System.Drawing.Point(23, 259);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(154, 16);
             this.label8.TabIndex = 6;
@@ -387,18 +384,19 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(244, 188);
+            this.label7.Location = new System.Drawing.Point(243, 138);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 48);
             this.label7.TabIndex = 5;
             this.label7.Text = "Pequeño\r\nMediano\r\nGrande";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(244, 156);
+            this.label6.Location = new System.Drawing.Point(243, 117);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 16);
             this.label6.TabIndex = 4;
@@ -408,18 +406,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(253, 83);
+            this.label5.Location = new System.Drawing.Point(251, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 32);
             this.label5.TabIndex = 3;
             this.label5.Text = "Foto\r\nBorrar\r\n";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(244, 35);
+            this.label4.Location = new System.Drawing.Point(241, 36);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 16);
             this.label4.TabIndex = 2;
@@ -434,6 +433,7 @@
             this.label3.Size = new System.Drawing.Size(65, 160);
             this.label3.TabIndex = 1;
             this.label3.Text = "Negro\r\nGris\r\nBlanco\r\nRosa\r\nAzul\r\nNaranja\r\nAmarillo\r\nRojo\r\nMorado\r\nVerde";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -468,6 +468,29 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "Cuadrado";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(237, 200);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 16);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Jugadores";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(239, 222);
+            this.label12.Name = "label12";
+            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label12.Size = new System.Drawing.Size(76, 32);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Circulo\r\nCuadrado";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,7 +508,6 @@
             this.Controls.Add(this.Colores);
             this.Controls.Add(this.B_Selec2);
             this.Controls.Add(this.PB_Lienzo2);
-            this.Controls.Add(this.Status_kinect);
             this.Controls.Add(this.B_conect);
             this.Controls.Add(this.PB_Lienzo);
             this.DoubleBuffered = true;
@@ -509,7 +531,6 @@
 
         private System.Windows.Forms.PictureBox PB_Lienzo;
         private System.Windows.Forms.Button B_conect;
-        private System.Windows.Forms.Label Status_kinect;
         private System.Windows.Forms.PictureBox PB_Lienzo2;
         private System.Windows.Forms.GroupBox Colores;
         private System.Windows.Forms.Button Blue;
@@ -539,6 +560,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }
 
